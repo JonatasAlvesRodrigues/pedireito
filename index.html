@@ -126,10 +126,12 @@
   @keyframes rise { to { opacity: 1; transform: none; } }
 
   .arch-wrap { position: relative; margin: 0; max-width: 460px; justify-self: end; width: 100%; translate: calc(var(--px, 0) * -16px) calc(var(--py, 0) * -12px); transition: translate .5s var(--ease); opacity: 0; animation: rise 1.2s .5s var(--ease) forwards; }
+  .hero .arch-wrap { max-width: 420px; }
   .arch-wrap::before, .arch-wrap::after { content: ""; position: absolute; inset: -14px; border: 1.5px solid rgba(232,69,124,.55); border-radius: 999px 999px 0 0; animation: halo 4.5s ease-in-out infinite; }
   .arch-wrap::after { inset: -30px; border-color: rgba(143,193,189,.4); animation-delay: 1.2s; }
   @keyframes halo { 0%, 100% { transform: scale(1); opacity: .9; } 50% { transform: scale(1.045); opacity: .25; } }
   .arch { position: relative; width: 100%; aspect-ratio: 3 / 4.3; border-radius: 999px 999px 0 0; overflow: hidden; background: radial-gradient(120% 70% at 50% 0%, rgba(232,69,124,.55), transparent 60%), linear-gradient(180deg, #4a494c, #353437); box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset; }
+  .hero .arch { aspect-ratio: 1 / 1; }
   .arch.float { animation: floaty 7s ease-in-out infinite; }
   @keyframes floaty { 50% { transform: translateY(-14px); } }
   .arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -209,6 +211,11 @@
 
   /* unidades */
   .units { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 32px); }
+  .hours { max-width: 540px; margin: 0 0 40px; padding: 22px 24px; border: 1px solid rgba(255,255,255,.16); border-radius: 18px; background: rgba(255,255,255,.05); }
+  .hours h3 { margin: 0 0 12px; font-family: var(--display); font-size: 28px; font-weight: 400; color: #fff; }
+  .hours dl { display: grid; grid-template-columns: auto 1fr; gap: 5px 24px; margin: 0; }
+  .hours dt { color: var(--muted-on-ink); }
+  .hours dd { margin: 0; color: #fff; font-weight: 600; }
   .unit { background: var(--ink-2); border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 6px; }
   .unit:hover { box-shadow: 0 0 0 1.5px var(--pitaya), 0 30px 60px -30px rgba(232,69,124,.55); }
   .unit h3 { font-family: var(--display); font-weight: 300; font-size: 36px; margin: 0 0 8px; color: #fff; }
@@ -315,7 +322,7 @@
       </div>
       <figure class="arch-wrap">
         <div class="arch float">
-          <img src="https://images.unsplash.com/photo-1423847043837-fb9c6f1064c7?auto=format&fit=crop&w=900&q=75" alt="Vitrine de loja de moda iluminada à noite (foto ilustrativa)" onerror="this.remove()">
+          <img src="assets/vitrine-pe-direito.png" alt="Vitrine tropical da loja Pé Direito" onerror="this.remove()">
           <span class="bubbles" aria-hidden="true">
             <i style="--s:18px;--l:20%;--t:8s;--dl:0s"></i><i style="--s:30px;--l:62%;--t:10s;--dl:2s"></i><i style="--s:12px;--l:80%;--t:7s;--dl:4s"></i>
           </span>
@@ -347,18 +354,18 @@
       <p class="intro reveal" style="--d:.1s">Da roupa do dia a dia ao presente que você nunca sabe onde achar. A Pé Direito reúne moda feminina completa, com opções para vários gostos e bolsos.</p>
       <div class="cats">
         <a class="cat reveal" style="--d:0s" href="https://wa.me/5518996515152?text=Ol%C3%A1!%20Quero%20ver%20roupas." target="_blank" rel="noopener">
-          <div class="arch" data-tilt><img src="https://images.unsplash.com/photo-1726947533365-9145f70ea85b?auto=format&fit=crop&w=800&q=75" alt="Vitrine com manequins vestindo moda feminina (foto ilustrativa)" loading="lazy" onerror="this.remove()"><span class="bubbles" aria-hidden="true"><i style="--s:16px;--l:25%;--t:9s;--dl:0s"></i><i style="--s:26px;--l:60%;--t:11s;--dl:3s"></i><i style="--s:10px;--l:80%;--t:7s;--dl:5s"></i></span></div>
+          <div class="arch" data-tilt><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Mulher escolhendo roupas em uma loja" loading="lazy" onerror="this.remove()"><span class="bubbles" aria-hidden="true"><i style="--s:16px;--l:25%;--t:9s;--dl:0s"></i><i style="--s:26px;--l:60%;--t:11s;--dl:3s"></i><i style="--s:10px;--l:80%;--t:7s;--dl:5s"></i></span></div>
           <div class="title"><h3>Roupas</h3></div>
           <p>Moda feminina para trabalho, passeio e ocasiões especiais.</p>
         </a>
         <a class="cat reveal" style="--d:.15s" href="https://wa.me/5518996515152?text=Ol%C3%A1!%20Quero%20ver%20cal%C3%A7ados%20e%20bolsas." target="_blank" rel="noopener">
-          <div class="arch" data-tilt><img src="https://images.unsplash.com/photo-1697909624356-c98d29afe5b6?auto=format&fit=crop&w=800&q=75" alt="Vitrine com sapatos de salto e bolsas (foto ilustrativa)" loading="lazy" onerror="this.remove()"><span class="bubbles" aria-hidden="true"><i style="--s:22px;--l:15%;--t:8s;--dl:1s"></i><i style="--s:14px;--l:50%;--t:6s;--dl:3s"></i><i style="--s:30px;--l:75%;--t:10s;--dl:0s"></i></span></div>
+          <div class="arch" data-tilt><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Sapatos femininos de salto" loading="lazy" onerror="this.remove()"><span class="bubbles" aria-hidden="true"><i style="--s:22px;--l:15%;--t:8s;--dl:1s"></i><i style="--s:14px;--l:50%;--t:6s;--dl:3s"></i><i style="--s:30px;--l:75%;--t:10s;--dl:0s"></i></span></div>
           <div class="title"><h3>Calçados e bolsas</h3></div>
           <p>Sapatos e bolsas de marcas que você já conhece e confia.</p>
         </a>
         <a class="cat reveal" style="--d:.3s" href="https://wa.me/5518996515152?text=Ol%C3%A1!%20Quero%20ver%20moda%20praia." target="_blank" rel="noopener">
           <div class="arch" data-tilt>
-            <img src="https://images.unsplash.com/photo-1530100922324-89ee2d315974?auto=format&fit=crop&w=800&q=75" alt="Mulher de biquíni branco na praia (foto ilustrativa)" loading="lazy" onerror="this.remove()">
+            <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80" alt="Mulher aproveitando um dia de praia" loading="lazy" onerror="this.remove()">
             <span class="bubbles" aria-hidden="true"><i style="--s:20px;--l:30%;--t:7s;--dl:0s"></i><i style="--s:12px;--l:55%;--t:9s;--dl:2s"></i><i style="--s:28px;--l:78%;--t:11s;--dl:4s"></i></span>
           </div>
           <div class="title"><h3>Moda praia</h3></div>
@@ -418,6 +425,14 @@
     <div class="wrap">
       <h2 class="reveal">Três lojas na região</h2>
       <p class="intro reveal" style="--d:.1s">Venha conhecer pessoalmente. Ligue ou chame no WhatsApp para confirmar horários e novidades.</p>
+      <aside class="hours reveal" style="--d:.15s" aria-labelledby="horarios-titulo">
+        <h3 id="horarios-titulo">Horário de atendimento</h3>
+        <dl>
+          <dt>Segunda a sexta</dt><dd>08:00–18:00</dd>
+          <dt>Sábado</dt><dd>09:00–13:00</dd>
+          <dt>Domingo</dt><dd>Fechado</dd>
+        </dl>
+      </aside>
       <div class="units">
         <article class="unit reveal" style="--d:0s" data-tilt>
           <span class="tag">Loja principal</span>
